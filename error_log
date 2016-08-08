@@ -1,0 +1,2 @@
+[14-Mar-2016 23:23:40 UTC] PHP Fatal error:  Call to a member function close() on a non-object in /home/kstardesigns2/public_html/kstardesigns.com/darwins/includes/register.inc.php on line 45
+[14-Mar-2016 23:29:33 UTC] PHP Fatal error:  Call to a member function close() on a non-object in /home/kstardesigns2/public_html/kstardesigns.com/darwins/includes/register.inc.php on line 45
