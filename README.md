@@ -1,2 +1,2 @@
 # darwins-natural
-Medicinal marijuan wholesale website
+Medicinal marijuana wholesale website
