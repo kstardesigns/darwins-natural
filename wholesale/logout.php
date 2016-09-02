@@ -7,6 +7,7 @@
  unset($_SESSION['State']);
  unset($_SESSION['Zip']);
  unset($_SESSION['id']);
+ unset($_SESSION['MJFreewayID']);
  
  header('Location: index.php');
 ?>

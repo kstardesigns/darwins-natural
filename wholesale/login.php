@@ -23,6 +23,7 @@ if(isset($_POST['submit']))
    $_SESSION['Address']=$row['Address'];
    $_SESSION['State']=$row['State'];
    $_SESSION['Zip']=$row['Zip'];
+   $_SESSION['MJFreewayID']=$row['MJFreewayID'];
    
    
    
