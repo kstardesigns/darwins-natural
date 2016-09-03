@@ -90,7 +90,7 @@ if(!isset($_SESSION['id']) ) {
 								<div class="qty"><div class="remove">-</div><div class="amt">0</div><div class="add">+</div> <div class="flavor" data-sku="SOD-KWST-10">Kiwi Strawberry</div></div>
 								<div class="qty"><div class="remove">-</div><div class="amt">0</div><div class="add">+</div> <div class="flavor" data-sku="SOD-LMLM-10">Lemon Lime</div></div>
 								<div class="qty"><div class="remove">-</div><div class="amt">0</div><div class="add">+</div> <div class="flavor" data-sku="SOD-MANO-10">Mandarin Orange</div></div>
-								<div class="qty"><div class="remove">-</div><div class="amt">0</div><div class="add">+</div> <div class="flavor" data-sku="SOD-BLCH-10">Black Cherry</div></div>
+								<div class="qty"><div class="remove">-</div><div class="amt">0</div><div class="add">+</div> <div class="flavor" data-sku="SODA-BLCH-10">Black Cherry</div></div>
 							</div>
 							<div class="c"></div>
 					</div>
@@ -137,9 +137,9 @@ if(!isset($_SESSION['id']) ) {
 								<h3 class="name">Mints</h3>
 								<div class="wholesale-pricing">$<span class="priceper">180</span>/case</div>
 								<div class="wholesale-desc">(Sold by the case.  Each case contains 20 tins, each tin contains 20 5mg THC mints)</div>
-								<div class="qty"><div class="remove">-</div><div class="amt">0</div><div class="add">+</div> <div class="flavor" data-sku="MNT-PEPP-20X5">Peppermint</div></div>
-								<div class="qty"><div class="remove">-</div><div class="amt">0</div><div class="add">+</div> <div class="flavor" data-sku="MNT-CINN-20X5">Cinnamon</div></div>
-								<div class="qty"><div class="remove">-</div><div class="amt">0</div><div class="add">+</div> <div class="flavor" data-sku="MNT-FRPU-20X5">Fruit Punch</div></div>
+								<div class="qty"><div class="remove">-</div><div class="amt">0</div><div class="add">+</div> <div class="flavor" data-sku="MNT-PEPP-05">Peppermint</div></div>
+								<div class="qty"><div class="remove">-</div><div class="amt">0</div><div class="add">+</div> <div class="flavor" data-sku="MNT-CINN-05">Cinnamon</div></div>
+								<div class="qty"><div class="remove">-</div><div class="amt">0</div><div class="add">+</div> <div class="flavor" data-sku="MNT-FRPU-05">Fruit Punch</div></div>
 							</div>
 							<div class="c"></div>
 					</div>
@@ -186,7 +186,7 @@ if(!isset($_SESSION['id']) ) {
 								<div class="wholesale-pricing">$<span class="priceper">180</span>/case</div>
 								<div class="wholesale-desc">(Sold by the case.  Each case contains 20 pouches; each pouch contains 10 10mg THC hard candies)</div>
 								<div class="qty"><div class="remove">-</div><div class="amt">0</div><div class="add">+</div> <div class="flavor" data-sku="HDC-WTMN-10">Watermelon</div></div>
-								<div class="qty"><div class="remove">-</div><div class="amt">0</div><div class="add">+</div> <div class="flavor" data-sku="HDC-GRAP-10">Green Apple</div></div>
+								<div class="qty"><div class="remove">-</div><div class="amt">0</div><div class="add">+</div> <div class="flavor" data-sku="HDC-GREA-10">Green Apple</div></div>
 								<div class="qty"><div class="remove">-</div><div class="amt">0</div><div class="add">+</div> <div class="flavor" data-sku="HDC-CHRY-10">Cherry</div></div>
 								<div class="qty"><div class="remove">-</div><div class="amt">0</div><div class="add">+</div> <div class="flavor" data-sku="HDC-RTBR-10">Root Beer</div></div>
 								<div class="qty"><div class="remove">-</div><div class="amt">0</div><div class="add">+</div> <div class="flavor" data-sku="HDC-LEMN-10">Lemon</div></div>

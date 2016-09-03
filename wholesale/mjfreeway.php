@@ -22,7 +22,7 @@ class MJFreewayAPI {
 			foreach ($line_items['line_items'] as $item) {
 
 				//var_dump($item);
-				var_dump($item['sku']);
+				//var_dump($item['sku']);
 				//var_dump($item['qty']);
 				
 				$response = $this->update_order($order_id, $patient_nid, $first_name, $last_name, $email, $phone_number, $item['sku'], $item['qty']);
@@ -30,13 +30,13 @@ class MJFreewayAPI {
 				//var_dump($response);
 
 				if ($response == null || !$this->process_response_code($response->response_code)) {
-				    throw new Exception('There was an error processing the line item. Bad response code.');
+				    throw new Exception('There was an error processing the line item. Bad response.');
 				}
 
 				$response = json_decode($response);
 
-				if ($response == null || $response->response_code == null) {
-				    throw new Exception('There was an error processing the line item. Bad response code.');
+				if ($response == null) {
+				    throw new Exception('There was an error processing the line item.');
 				}
 
 				if ($response->response_details->success) {
@@ -53,17 +53,22 @@ class MJFreewayAPI {
 
 			// Complete the order - MJ Freeway API: complete_order
 			$response = $this->complete_order($order_id, $patient_nid);
-			$response = json_decode($response);
 
 			//var_dump($response);
 
-			if ($response->response_code != null && !$this->process_response_code($response->response_code)) {
-				throw new Exception('There was an error processing the order. Bad response code.');
-			}
+			//if ($response == null || !$this->process_response_code($response->response_code)) {
+			//    throw new Exception('There was an error processing the order. Bad response.');
+			//}
 
-			if ($response != null && !$response->response_details->success) {
-				throw new Exception('There was an error processing the order. Not successful.');
-			}
+			//$response = json_decode($response);
+
+			//if ($response == null) {
+			//    throw new Exception('There was an error processing the order.');
+			//}
+
+			//if ($response->response_details->success) {
+			//    throw new Exception('There was an error processing the order. Not successful.');
+			//}
 
 			return $patient_nid;
 
@@ -79,10 +84,16 @@ class MJFreewayAPI {
 	}
 
 	private function complete_order($order_id, $patient_nid) {
-		return $this->make_api_call('complete_order', $this->get_api_fields($this->get_order_fields($order_id, $patient_nid)));
+		$order_fields = $this->get_order_fields($order_id, $patient_nid);
+		//var_dump($order_fields);
+		return $this->make_api_call('complete_order', $this->get_api_fields($order_fields));
 	}
 
 	private function process_response_code($response_code) {
+
+		// 'cash' type should work. We are ignoring this error for now.
+		if ($response_code == " ERROR BADPAYMENTTYPE The Payment type provided was not a valid type. ")
+			return true;
 
 		// ERROR BADSKUID The product sku is invalid and does not exist on the system or is inactive. 
 		if (substr( $response_code, 0, 5 ) === "ERROR") {
@@ -181,7 +192,7 @@ class MJFreewayAPI {
 
 		curl_close($ch);
 
-		var_dump($response);
+		//var_dump($response);
 
 		//Upon successful receipt of the HTTP request, 
 		//the API will return a JSON object named r
